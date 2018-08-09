@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:xamarinhandson" xmlns:conv="clr-namespace:xamarinhandson.&#xA;    Converters;assembly=xamarinhandson" x:Class="xamarinhandson.MainPage">
+    <StackLayout>
+        <StackLayout>
+            <Image x:Name="Image1" HeightRequest="100" />
+            <ActivityIndicator x:Name="Indicator1" HeightRequest="20" IsRunning="False" />
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="性別: " />
+                <Label x:Name="GenderLabel" Text="{Binding Path=Gender}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="年齢: " />
+                <Label x:Name="AgeLabel" Text="{Binding Path=Age}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="感情: " />
+                <Label x:Name="EmotionLabel" Text="{Binding Path=Emotion}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="笑顔: " />
+                <Label x:Name="SmileLabel" Text="{Binding Path=Smile}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="眼鏡: " />
+                <Label x:Name="GlassesLabel" Text="{Binding Path=Glasses}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="ひげ: " />
+                <Label x:Name="BeardLabel" Text="{Binding Path=Beard}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="口ひげ: " />
+                <Label x:Name="MoustacheLabel" Text="{Binding Path=Moustache}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="怒り: " />
+                <Label x:Name="AngerLabel" Text="{Binding Path=Anger}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="軽蔑: " />
+                <Label x:Name="ContemptLabel" Text="{Binding Path=Contempt}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="嫌悪: " />
+                <Label x:Name="DisgustLabel" Text="{Binding Path=Disgust}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="恐怖: " />
+                <Label x:Name="FearLabel" Text="{Binding Path=Fear}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="幸福: " />
+                <Label x:Name="HappinessLabel" Text="{Binding Path=Happiness}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="中立: " />
+                <Label x:Name="NeutralLabel" Text="{Binding Path=Neutral}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="悲しみ: " />
+                <Label x:Name="SadnessLabel" Text="{Binding Path=Sadness}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="3">
+                <Label Text="驚き: " />
+                <Label x:Name="SurpriseLabel" Text="{Binding Path=Surprise}" />
+            </StackLayout>
+
+        </StackLayout>
+        <Grid VerticalOptions="EndAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="TakePictureButton" Grid.Column="0" Clicked="TakePictureButton_Clicked" Text="Take from camera" />
+            <Button x:Name="UploadPictureButton" Grid.Column="1" Clicked="UploadPictureButton_Clicked" Text="Pick a photo" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
